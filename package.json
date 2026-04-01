@@ -2,6 +2,7 @@
   "name": "postcss-convert-colors-to-vars",
   "version": "0.1.0",
   "description": "PostCSS plugin to replace hardcoded CSS colors with design token CSS variables.",
+  "author": "skobets",
   "keywords": [
     "postcss-plugin",
     "postcss",
