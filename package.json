@@ -1,0 +1,63 @@
+{
+  "name": "postcss-convert-colors-to-vars",
+  "version": "0.1.0",
+  "description": "PostCSS plugin to replace hardcoded CSS colors with design token CSS variables.",
+  "keywords": [
+    "postcss-plugin",
+    "postcss",
+    "css",
+    "design-tokens",
+    "css-variables",
+    "custom-properties",
+    "color-tokens",
+    "design-system",
+    "style-tokens",
+    "token-transform",
+    "css-transform",
+    "css-migration",
+    "theming",
+    "dark-mode",
+    "light-theme",
+    "postcss-color"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "sideEffects": false,
+  "peerDependencies": {
+    "postcss": "^8.4.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.11",
+    "jest": "^29.0.3",
+    "postcss": "^8.4.49",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.3.3"
+  },
+  "scripts": {
+    "build": "node scripts/prepare-dist.mjs && tsc -p tsconfig.json && tsc -p tsconfig.cjs.json && node scripts/write-cjs-package-json.mjs",
+    "test": "npm run build && jest --config jest.config.cjs --runInBand",
+    "prepublishOnly": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s-kobets/postcss-convert-colors-to-vars.git"
+  },
+  "homepage": "https://github.com/s-kobets/postcss-convert-colors-to-vars#readme",
+  "bugs": {
+    "url": "https://github.com/s-kobets/postcss-convert-colors-to-vars/issues"
+  }
+}
