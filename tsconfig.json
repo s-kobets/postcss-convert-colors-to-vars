@@ -2,7 +2,7 @@
   "compilerOptions": {
     "allowJs": false,
     "declaration": true,
-    "declarationMap": true,
+    "declarationMap": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
@@ -13,7 +13,7 @@
     "target": "es2019",
     "outDir": "./dist/esm",
     "rootDir": "./src",
-    "sourceMap": true
+    "sourceMap": false
   },
   "include": ["src/**/*.ts"],
   "exclude": ["dist", "node_modules"]
